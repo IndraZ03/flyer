@@ -1,218 +1,162 @@
 <!DOCTYPE html>
 <html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Promo Try Out Kedinasan 2026</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800;900&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800;900&display=swap" rel="stylesheet">
     <style>
-      body {
-        font-family: "Poppins", sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #0f172a;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-      }
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0f172a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+        
+        /* Container Rasio 9:16 yang Responsif */
+        .flyer-container {
+            width: 100vw;
+            height: calc(100vw * 16 / 9);
+            max-height: 100vh;
+            max-width: calc(100vh * 9 / 16);
+            position: relative;
+            background-color: #2563eb; 
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            border: 0.5vh solid #facc15;
+            box-sizing: border-box;
+        }
 
-      /* Container Rasio 9:16 yang Presisi */
-      .flyer-container {
-        width: 100vw;
-        height: calc(100vw * 16 / 9);
-        max-height: 100vh;
-        max-width: calc(100vh * 9 / 16);
-        position: relative;
-        background-color: #2563eb; /* Blue-600 */
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        border: 4px solid #facc15; /* Yellow-400 */
-      }
+        .text-shadow-custom {
+            text-shadow: 0.4vh 0.4vh 0px rgba(0,0,0,0.3);
+        }
 
-      .text-shadow-custom {
-        text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.3);
-      }
+        .strikethrough-red {
+            position: relative;
+            display: inline-block;
+        }
+        .strikethrough-red::after {
+            content: "";
+            position: absolute;
+            left: -5%;
+            top: 50%;
+            width: 110%;
+            height: 0.3vh;
+            background: #ef4444;
+            transform: rotate(-12deg);
+        }
 
-      .strikethrough-red {
-        position: relative;
-        display: inline-block;
-      }
-      .strikethrough-red::after {
-        content: "";
-        position: absolute;
-        left: -5%;
-        top: 50%;
-        width: 110%;
-        height: 3px;
-        background: #ef4444;
-        transform: rotate(-12deg);
-      }
+        /* Satuan dinamis untuk teks agar tidak overflow pada layar pendek */
+        .hero-title { font-size: clamp(2rem, 6vh, 4rem); }
+        .hero-price { font-size: clamp(5rem, 15vh, 10rem); }
+        .hero-currency { font-size: clamp(1.5rem, 4vh, 3rem); }
     </style>
-  </head>
-  <body>
+</head>
+<body>
+
     <div class="flyer-container shadow-2xl">
-      <!-- TOP SECTION: Logo & Label -->
-      <div class="pt-6 px-4 text-center z-10">
-        <div class="flex justify-center mb-3">
-          <!-- Placeholder Logo -->
-          <div
-            class="bg-white px-3 py-1 rounded shadow-md border border-blue-100"
-          >
-            <img src="LOGO-SPEEDU.png" alt="Logo" class="h-8 object-contain" />
-          </div>
+        
+        <!-- TOP SECTION -->
+        <div class="pt-[3vh] px-4 text-center z-10 shrink-0">
+            <div class="flex justify-center mb-[1.5vh]">
+                <div class="bg-white px-3 py-1 rounded shadow-md border border-blue-100">
+                    <img src="LOGO-SPEEDU.png" alt="Logo" class="h-[4vh] object-contain">
+                </div>
+            </div>
+            <span class="inline-block bg-yellow-400 text-blue-900 font-black px-4 py-1 rounded-full text-[1.2vh] tracking-[0.2em] uppercase shadow-sm">
+                PROMO EKSKLUSIF
+            </span>
         </div>
-        <span
-          class="inline-block bg-yellow-400 text-blue-900 font-black px-4 py-1 rounded-full text-[10px] tracking-[0.2em] uppercase shadow-sm"
-        >
-          PROMO EKSKLUSIF
-        </span>
-      </div>
 
-      <!-- MAIN HEADLINE -->
-      <div class="mt-4 px-6 text-center z-10">
-        <p
-          class="text-white text-xs font-bold tracking-widest uppercase opacity-90"
-        >
-          Try Out Sekolah Kedinasan
-        </p>
-        <h1
-          class="text-yellow-400 text-3xl font-black leading-none mt-1 text-shadow-custom italic uppercase"
-        >
-          SKD KEDINASAN 2026
-        </h1>
-      </div>
-
-      <!-- HERO OFFER: Rp 0 & 3x Try Out -->
-      <div
-        class="flex-grow flex flex-col items-center justify-center px-4 z-10"
-      >
-        <div class="w-full py-2 rounded-3xl flex flex-col items-center">
-          <p
-            class="text-white text-xl font-black uppercase tracking-tighter mb-[-8px]"
-          >
-            GRATIS
-          </p>
-          <h2
-            class="text-yellow-400 text-6xl font-black italic text-shadow-custom tracking-tighter leading-none mb-4"
-          >
-            3x TRY OUT
-          </h2>
-
-          <div class="flex flex-col items-center">
-            <div class="strikethrough-red text-white/80 text-xl font-bold mb-1">
-              Rp 45.000
-            </div>
-            <div
-              class="text-white text-[120px] font-black leading-[0.8] flex items-start text-shadow-custom"
-            >
-              <span class="text-4xl mt-4 mr-1">Rp</span>0
-            </div>
-          </div>
-
-          <div
-            class="mt-6 bg-red-600 text-white font-black px-5 py-2 rounded-xl text-sm shadow-lg border-2 border-white uppercase"
-          >
-            PROMO TERBATAS! HANYA HINGGA 31 JAN
-          </div>
+        <!-- MAIN HEADLINE -->
+        <div class="mt-[1vh] px-6 text-center z-10 shrink-0">
+            <p class="text-white text-[1.4vh] font-bold tracking-widest uppercase opacity-90">Try Out Sekolah Kedinasan</p>
+            <h1 class="text-yellow-400 text-[3.5vh] font-black leading-none mt-1 text-shadow-custom italic uppercase">
+                SKD KEDINASAN 2026
+            </h1>
         </div>
-      </div>
 
-      <!-- KEY BENEFITS LIST -->
-      <div class="px-8 mb-6 z-10">
-        <div class="grid grid-cols-1 gap-2">
-          <div class="flex items-center gap-2">
-            <div class="bg-yellow-400 p-0.5 rounded-full">
-              <svg
-                class="w-4 h-4 text-blue-800"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                stroke-width="4"
-              >
-                <path d="M5 13l4 4L19 7"></path>
-              </svg>
+        <!-- HERO OFFER -->
+        <div class="flex-grow flex flex-col items-center justify-center px-4 z-10 overflow-hidden">
+            <div class="w-full flex flex-col items-center">
+                <p class="text-white text-[2.5vh] font-black uppercase tracking-tighter mb-[-1vh]">GRATIS</p>
+                <h2 class="text-yellow-400 hero-title font-black italic text-shadow-custom tracking-tighter leading-none mb-[2vh]">
+                    3x TRY OUT
+                </h2>
+                
+                <div class="flex flex-col items-center">
+                    <div class="strikethrough-red text-white/80 text-[2.2vh] font-bold mb-1">
+                        Rp 45.000
+                    </div>
+                    <div class="text-white hero-price font-black leading-[0.85] flex items-start text-shadow-custom">
+                        <span class="hero-currency mt-[2vh] mr-1">Rp</span>0
+                    </div>
+                </div>
+
+                <div class="mt-[2vh] bg-red-600 text-white font-black px-[2vh] py-[1vh] rounded-xl text-[1.5vh] shadow-lg border-[0.2vh] border-white uppercase text-center leading-tight">
+                    PROMO TERBATAS!<br>HANYA HINGGA 31 JAN
+                </div>
             </div>
-            <p class="text-white text-sm font-bold leading-tight">
-              Soal Berdasarkan Pelaksanaan SKD Tahun 2025
+        </div>
+
+        <!-- KEY BENEFITS LIST -->
+        <div class="px-8 mb-[2vh] z-10 shrink-0">
+            <div class="grid grid-cols-1 gap-[1vh]">
+                <div class="flex items-center gap-2">
+                    <div class="bg-yellow-400 p-0.5 rounded-full shrink-0">
+                        <svg class="w-[1.8vh] h-[1.8vh] text-blue-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="4">
+                            <path d="M5 13l4 4L19 7"></path>
+                        </svg>
+                    </div>
+                    <p class="text-white text-[1.6vh] font-bold leading-tight">Soal Berdasarkan Pelaksanaan SKD 2025</p>
+                </div>
+                <div class="flex items-center gap-2">
+                    <div class="bg-yellow-400 p-0.5 rounded-full shrink-0">
+                        <svg class="w-[1.8vh] h-[1.8vh] text-blue-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="4">
+                            <path d="M5 13l4 4L19 7"></path>
+                        </svg>
+                    </div>
+                    <p class="text-white text-[1.6vh] font-bold leading-tight">TWK, TIU, TKP. Kapanpun & Dimanapun!</p>
+                </div>
+                <div class="flex items-center gap-2">
+                    <div class="bg-yellow-400 p-0.5 rounded-full shrink-0">
+                        <svg class="w-[1.8vh] h-[1.8vh] text-blue-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="4">
+                            <path d="M5 13l4 4L19 7"></path>
+                        </svg>
+                    </div>
+                    <p class="text-white text-[1.6vh] font-bold leading-tight">Pembahasan Dapat Diakses 24 Jam!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- BOTTOM SECTION -->
+        <div class="px-6 pb-[4vh] z-10 shrink-0">
+            <p class="text-center text-white/80 text-[1.2vh] font-medium mb-[1.5vh] uppercase tracking-widest">
+                Target Lolos Kedinasan 2026
             </p>
-          </div>
-          <div class="flex items-center gap-2">
-            <div class="bg-yellow-400 p-0.5 rounded-full">
-              <svg
-                class="w-4 h-4 text-blue-800"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                stroke-width="4"
-              >
-                <path d="M5 13l4 4L19 7"></path>
-              </svg>
+            
+            <div class="space-y-4">
+                <a href="https://speedu.online" class="flex items-center justify-center w-full bg-yellow-400 hover:bg-yellow-300 text-blue-900 font-black py-[2vh] px-2 rounded-2xl text-center shadow-[0_0.6vh_0_rgb(202,138,4)] active:shadow-none active:translate-y-1 transition-all uppercase leading-tight">
+                    <span class="text-[1.8vh]">DAFTAR SEKARANG DI<br><span class="text-[2.5vh] tracking-tighter">SPEEDU.ONLINE</span></span>
+                </a>
             </div>
-            <p class="text-white text-sm font-bold leading-tight">
-              TWK, TIU, TKP. Dapat dikerjakan kapanpun!
+            
+            <p class="text-center text-white/60 text-[1vh] mt-[1.5vh] font-bold uppercase italic">
+                *Hanya untuk 100 pendaftar pertama hari ini
             </p>
-          </div>
-          <div class="flex items-center gap-2">
-            <div class="bg-yellow-400 p-0.5 rounded-full">
-              <svg
-                class="w-4 h-4 text-blue-800"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                stroke-width="4"
-              >
-                <path d="M5 13l4 4L19 7"></path>
-              </svg>
-            </div>
-            <p class="text-white text-sm font-bold leading-tight">
-              Pembahasan yang dapat diakses 24 jam!
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- BOTTOM SECTION: CTA -->
-      <div class="px-6 pb-12 z-10">
-        <p
-          class="text-center text-white/80 text-[10px] font-medium mb-3 uppercase tracking-widest"
-        >
-          Target Lolos Kedinasan 2026
-        </p>
-
-        <div class="space-y-4">
-          <!-- CTA Button with Full Text -->
-          <a
-            href="https://speedu.online"
-            class="flex items-center justify-center w-full bg-yellow-400 hover:bg-yellow-300 text-blue-900 font-black py-4 px-2 rounded-2xl text-center shadow-[0_6px_0_rgb(202,138,4)] active:shadow-none active:translate-y-1 transition-all uppercase leading-tight"
-          >
-            <span class="text-lg"
-              >DAFTAR SEKARANG DI<br /><span class="text-2xl tracking-tighter"
-                >SPEEDU.ONLINE</span
-              ></span
-            >
-          </a>
         </div>
 
-        <p
-          class="text-center text-white/60 text-[9px] mt-4 font-bold uppercase italic"
-        >
-          *Hanya untuk 100 pendaftar pertama hari ini
-        </p>
-      </div>
-
-      <!-- DECORATIVE ELEMENTS -->
-      <div
-        class="absolute top-[-5%] left-[-10%] w-64 h-64 bg-blue-500 rounded-full opacity-20 blur-3xl"
-      ></div>
-      <div
-        class="absolute bottom-[10%] right-[-20%] w-80 h-80 bg-white rounded-full opacity-5 blur-2xl"
-      ></div>
+        <!-- DECORATIVE ELEMENTS -->
+        <div class="absolute top-[-5%] left-[-10%] w-[30vh] h-[30vh] bg-blue-500 rounded-full opacity-20 blur-3xl"></div>
+        <div class="absolute bottom-[10%] right-[-20%] w-[40vh] h-[40vh] bg-white rounded-full opacity-5 blur-2xl"></div>
     </div>
-  </body>
+
+</body>
 </html>
